@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.agufish.project.mapper.TradeMapper">
+
+    <resultMap id="BaseResultMap" type="com.agufish.project.model.entity.Trade">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="cardId" column="card_id" jdbcType="INTEGER"/>
+        <result property="tradeDate" column="trade_date" jdbcType="TIMESTAMP"/>
+        <result property="tradeMoney" column="trade_money" jdbcType="DECIMAL"/>
+        <result property="tradeType" column="trade_type" jdbcType="CHAR"/>
+        <result property="remark" column="remark" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="isDelete" column="is_delete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id
+        ,card_id,trade_date,
+        trade_money,trade_type,remark,
+        create_time,update_time,is_delete
+    </sql>
+
+</mapper>
